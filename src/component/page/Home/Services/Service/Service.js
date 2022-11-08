@@ -1,8 +1,10 @@
 import React from 'react';
+import { FaStar } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import './service.css';
 
 const Service = ({service}) => {
-  const{_id, service_id, title ,img , description} = service;
+  const{_id,rating,price, service_id, title ,img , description} = service;
 
     return (
 <div >
@@ -12,12 +14,18 @@ const Service = ({service}) => {
   <figure><img src={img} alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">
-      Shoes!
-      <div className="badge badge-secondary">NEW</div>
+     {title}
     </h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
-    <div className="card-actions justify-end">
-      <button>Details</button>
+    <p>{
+          description.length > 100? <>{description.slice(0,100)+ '.......'}<Link to={`/services/${_id}`}><b className='text-blue'>Read more</b></Link></> :
+           description}</p>
+    <div className="card-actions justify-evenly ">
+     <div className='flex pt-4 my-2'>
+     <p>{rating} </p>
+     <FaStar className='me-3 w-5 h-5 fill-current text-amber-500'></FaStar>
+     <p className='mx-3'>Price: ${price}</p>
+     </div>
+      <Link to='/services'><button className="btn border-2 ">Details</button></Link>
     </div>
   </div>
 </div>

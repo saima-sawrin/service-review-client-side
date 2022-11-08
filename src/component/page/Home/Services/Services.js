@@ -23,6 +23,9 @@ const Services = () => {
             services.map(service => <Service key={service._id} service={service}></Service>)
          }
      </div>
+     <div className='flex justify-center '>
+     <button className="btn bg-violet-500 border-0  mx-20 my-5  ">View All</button>
+     </div>
         </div>
     );
 };

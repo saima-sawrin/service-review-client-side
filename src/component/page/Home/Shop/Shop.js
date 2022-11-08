@@ -1,4 +1,8 @@
 import React from 'react';
+import img1 from '../../../../assets/1.jpg';
+import img2 from '../../../../assets/2.jpg';
+import img3 from '../../../../assets/3.jpg';
+import img4 from '../../../../assets/4.png';
 
 const Shop = () => {
     return (
@@ -11,13 +15,13 @@ const Shop = () => {
               <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
                 <img
                   className="object-cover w-full h-56 md:h-64 xl:h-80"
-                  src="https://images.pexels.com/photos/3184311/pexels-photo-3184311.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500"
+                  src={img1}
                   alt=""
                 />
                 <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
-                  <p className="mb-4 text-lg font-bold text-gray-100">Mona Lisa</p>
+                  <p className="mb-4 text-lg font-bold text-gray-100">Lakme EyeLiner</p>
                   <p className="text-sm tracking-wide text-gray-300">
-                    Price:
+                    Price: $ 250
                   </p>
                 </div>
               </div>
@@ -26,17 +30,15 @@ const Shop = () => {
               <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
                 <img
                   className="object-cover w-full h-56 md:h-64 xl:h-80"
-                  src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                  src={img2}
                   alt=""
                 />
                 <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
                   <p className="mb-4 text-lg font-bold text-gray-100">
-                    The Starry Night
+                  Super Nibana Lipstick
                   </p>
                   <p className="text-sm tracking-wide text-gray-300">
-                    Vincent Van Gogh’s most popular painting, The Starry Night was
-                    created by Van Gogh at the asylum in Saint-Rémy, where he’d
-                    committed himself in 1889.
+                  Price: $450
                   </p>
                 </div>
               </div>
@@ -45,16 +47,13 @@ const Shop = () => {
               <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
                 <img
                   className="object-cover w-full h-56 md:h-64 xl:h-80"
-                  src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                  src={img3}
                   alt=""
                 />
                 <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
-                  <p className="mb-4 text-lg font-bold text-gray-100">The Kiss</p>
+                  <p className="mb-4 text-lg font-bold text-gray-100">Himalaya Facewash</p>
                   <p className="text-sm tracking-wide text-gray-300">
-                    Opulently gilded and extravagantly patterned, The Kiss, Gustav
-                    Klimt’s fin-de-siècle portrayal of intimacy, is a mix of
-                    Symbolism and Vienna Jugendstil, the Austrian variant of Art
-                    Nouveau.
+                   Price: $560
                   </p>
                 </div>
               </div>
@@ -63,17 +62,15 @@ const Shop = () => {
               <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
                 <img
                   className="object-cover w-full h-56 md:h-64 xl:h-80"
-                  src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                  src={img4}
                   alt=""
                 />
                 <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
                   <p className="mb-4 text-lg font-bold text-gray-100">
-                    The Harvesters
+                   Aloe Vera Gel
                   </p>
                   <p className="text-sm tracking-wide text-gray-300">
-                    Bruegel’s fanfare for the common man is considered one of the
-                    defining works of Western art. This composition was one of six
-                    created on the theme of the seasons.
+                   Price: $350
                   </p>
                 </div>
               </div>

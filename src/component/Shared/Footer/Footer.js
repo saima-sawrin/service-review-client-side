@@ -66,7 +66,7 @@ const Footer = () => {
                     <FaInstagram className='me-3 w-5 h-5 fill-current"'></FaInstagram>
 					</a>
 					<a rel="noopener noreferrer" href="#" title="Instagram" className="flex items-center p-1">
-					<FaWhatsapp className='me-3 w-5 h-5 fill-current"'></FaWhatsapp>
+					<FaWhatsapp className='me-3 w-5 h-5 fill-current'></FaWhatsapp>
 					</a>
 				</div>
 			</div>

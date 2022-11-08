@@ -19,11 +19,11 @@ const Header = () => {
 				<Link rel="noopener noreferrer" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Link</Link>
 			</li>
 			<li className="flex">
-				<Link rel="noopener noreferrer" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Blog</Link>
+				<Link to='/blog' rel="noopener noreferrer" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Blog</Link>
 			</li>
 		</ul>
 		<div className="items-center flex-shrink-0 hidden lg:flex">
-			<button className="self-center px-8 py-3 rounded">Sign in</button>
+			<Link to='/signin'><button className="self-center px-8 py-3 rounded">Sign in</button></Link>
 			<button className="self-center px-8 py-3 font-semibold rounded dark:bg-violet-400 dark:text-gray-900">Sign up</button>
 		</div>
 		<button className="p-4 lg:hidden">
