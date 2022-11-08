@@ -3,16 +3,10 @@ import React from 'react';
 const Gallery= () => {
     return (
         <div>
-        <div className="text-center">
-            <a
-              href="/"
-              aria-label=""
-              className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-            >
-              View gallery
-        
-            </a>
-          </div>
+      
+      <h2 className="max-w-lg mb-5 font-sans text-3xl font-bold tracking-tight  sm:text-4xl sm:leading-none md:mb-6 text-center group">
+              View Gallery
+            </h2>
             <section className="py-6 dark:bg-gray-800">
 	<div className="container flex flex-col justify-center p-4 mx-auto">
 		<div className="grid grid-cols-1 gap-4 lg:grid-cols-4 sm:grid-cols-2">

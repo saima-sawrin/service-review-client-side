@@ -1,17 +1,15 @@
 import React from 'react';
 import './service.css';
 
-const Service = () => {
-    return (
-<div className='serviceCard '>
+const Service = ({service}) => {
+  const{_id, service_id, title ,img , description} = service;
 
-            <h2 className="max-w-lg mb-5 font-sans text-3xl font-bold tracking-tight  sm:text-4xl sm:leading-none md:mb-6 text-center group">
-              Our Services
-            </h2>
-            
+    return (
+<div >
+
 
 <div className="card w-96 bg-base-100 shadow-xl m-auto mt-5  text-black">
-  <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
+  <figure><img src={img} alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">
       Shoes!
@@ -23,6 +21,7 @@ const Service = () => {
     </div>
   </div>
 </div>
+
 </div>
     );
 };
