@@ -36,9 +36,9 @@ const Details = () => {
              <div className='flex pt-4 my-2'>
              <p>{rating} </p>
              <FaStar className='me-3 w-5 h-5 fill-current text-amber-500'></FaStar>
-             <p className='mx-3'>Price: ${price}</p>
+             <p className='mx-3'><b></b></p>
              </div>
-              <Link to={`/service/${_id}`}><button className="btn border-2 ">Details</button></Link>
+              
             </div>
           </div>
         </div>
@@ -114,7 +114,7 @@ const Details = () => {
 			</div>
 		</div>
 		<div className="flex flex-col w-full">
-			<textarea rows="3" placeholder="Message..." className="p-4 rounded-md resize-none dark:text-gray-100 dark:bg-gray-900"></textarea>
+			<textarea rows="3" placeholder="Message..." className="p-4 rounded-md resize-none text-gray-900 bg-white-900"></textarea>
 			<button type="button" className="py-4 my-8 font-semibold rounded-md dark:text-gray-900 dark:bg-violet-400">Leave feedback</button>
 		</div>
 	</div>

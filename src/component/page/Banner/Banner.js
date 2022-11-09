@@ -14,7 +14,7 @@ const Banner = () => {
 				<span>Plus free shipping! </span>
 				
 			</div>
-			<Link to=''  className="px-5 mt-4 lg:mt-0 py-3 rounded-md border block dark:bg-gray-50 dark:text-gray-900 dark:border-gray-400">Shop Now</Link>
+			<Link to='/services'  className="px-5 mt-4 lg:mt-0 py-3 rounded-md border block dark:bg-gray-50 dark:text-gray-900 dark:border-gray-400">Shop Now</Link>
 		</div>
 	</div>
 </div>
