@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../../../assets/img/salon.png';
+import { AuthContext } from '../../../context/AuthProvider';
+import { FaUser } from 'react-icons/fa';
 
 const Header = () => {
+	// const {user , LogOut} = useContext(AuthContext);
+	// console.log(user)
+
+	// const handleLogOut =()=>{
+	// 	LogOut()
+	// 	.then(()=>{})
+	// 	.catch(error => console.error(error))
+	//   }
     return (
         <header className="p-4 dark:bg-gray-800 dark:text-gray-100">
 	<div className="container flex justify-between h-16 mx-auto">
 		<Link rel="noopener noreferrer" to="" aria-label="Back to homepage" className="flex items-center p-2">
-			<img className='w-10 h-10' src="salon.png"  alt="" />
+			<img className='w-10 h-10' src={logo}  alt="" />
 		</Link>
 		<ul className="items-stretch hidden space-x-3 lg:flex">
 			<li className="flex">
@@ -22,6 +33,33 @@ const Header = () => {
 				<Link to='/blog' rel="noopener noreferrer" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Blog</Link>
 			</li>
 		</ul>
+        {/* <>
+            {
+              user?.uid ?
+              <>
+                  <button variant="light" onClick={handleLogOut}>Log out</button>
+              </>
+              :
+              <>
+                 <Link to='/login'><button className="self-center px-8 py-3 rounded">Sign in</button></Link>
+                  <Link className='text-decoration-none  mx-3' to='/reg'><button className="self-center px-8 py-3 font-semibold rounded dark:bg-violet-400 dark:text-gray-900">Sign up</button></Link>
+              </>
+          }
+		  <>
+		  {user?.photoURL?
+                          
+						  <image
+							  style={{ height: '30px' }}
+							  roundedCircle
+							  title= {user.displayName}
+							  src={user.photoURL}>
+						  </image>
+				   
+						  : <FaUser></FaUser>
+					  }</>
+          </> */}
+
+		
 		<div className="items-center flex-shrink-0 hidden lg:flex">
 			<Link to='/signin'><button className="self-center px-8 py-3 rounded">Sign in</button></Link>
 			<button className="self-center px-8 py-3 font-semibold rounded dark:bg-violet-400 dark:text-gray-900">Sign up</button>

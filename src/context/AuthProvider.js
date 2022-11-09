@@ -5,7 +5,7 @@ import app from '../firebase/Firebase.config';
 export const AuthContext= createContext();
 const auth = getAuth(app);
 const AuthProvider = ({children}) => {
-    const [user , setUser]= useState(null);
+    const [user , setUser]= useState({});
     const [loading , setLoading] = useState(true);
   
    
@@ -47,7 +47,7 @@ const AuthProvider = ({children}) => {
    }, [])
 
 
-    const authInfo = {user , loading , verifyEmail, signIN , LogOut , createUser , LogIn ,profileUpdate,};
+    const authInfo = {user , signIN , LogOut , createUser , LogIn ,profileUpdate, loading , verifyEmail};
     return (
         <AuthContext.Provider value={authInfo}>
         {children}

@@ -3,16 +3,17 @@ import { FaStar } from 'react-icons/fa';
 import { Link, useLoaderData } from 'react-router-dom';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
-import { AuthContext } from '../../../context/AuthProvider';
+import useTitle from '../../../Hooks/useTitle';
+// import { AuthContext } from '../../../context/AuthProvider';
 
 
 const Details = () => {
     const {_id,rating,price, service_id, title ,img , description}= useLoaderData();
-    const{user} = useContext(AuthContext)
-  
+    // const{user} = useContext(AuthContext)
+    useTitle('serviceDetails')
     
     return (
-        <div className='flex'>
+        <div className='flex w-3/5 justify-between m-auto'>
 
             {/* Service details section */}
             <div>
@@ -29,7 +30,7 @@ const Details = () => {
              {title}
             </h2>
             <p>{
-                  description.length > 100? <>{description.slice(0,100)+ '.......'}<Link to={`/services/${_id}`}><b className='text-blue'>Read more</b></Link></> :
+                  
                    description}</p>
             <div className="card-actions justify-evenly ">
              <div className='flex pt-4 my-2'>
@@ -42,17 +43,17 @@ const Details = () => {
           </div>
         </div>
            
-     </div>
+           </div>
 
 
 
             {/*  Review Section */}
-     <div className='reviewPart'>
+            <div className='reviewPart  w-2/5 '>
       
       
  {/* Customer Review */}
-<div>
-<div className="container flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md divide-gray-700 dark:bg-gray-900 dark:text-gray-100">
+<div className='justify-end'>
+<div className="container flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md divide-gray-700 text-gray-900 bg-gray-100">
 	<div className="flex justify-between p-4">
 		<div className="flex space-x-4">
 			<div>
@@ -79,7 +80,7 @@ const Details = () => {
 
   {/* Own FeedBack */}
 <div>
-<div className="flex flex-col max-w-xl p-8 shadow-sm rounded-xl lg:p-12 dark:bg-gray-900 dark:text-gray-100">
+<div className="flex flex-col max-w-xl p-8 shadow-sm rounded-xl lg:p-12 bg-gray-900 text-gray-100">
 	<div className="flex flex-col items-center w-full">
 		<h2 className="text-3xl font-semibold text-center">Your opinion matters!</h2>
 		<div className="flex flex-col items-center py-6 space-y-3">
