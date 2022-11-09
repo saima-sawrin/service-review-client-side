@@ -26,8 +26,6 @@ const SignUp = () => {
              alert('Successfully Registered ');
              console.log(user);
              form.reset();
-        
-            
             
              
          })
@@ -73,9 +71,10 @@ const SignUp = () => {
                     <div className="form-control mt-6">
                         <input className="btn btn-primary" type="submit" value="Sign Up" />
                     </div>
+                    <p className='text-center'>Already have an account? <Link className='text-primary font-bold' to="/login">Login</Link> </p>
+                     <p className='text-red-500'>{error}</p>
                 </form>
-                <p className='text-center'>Already have an account? <Link className='text-primary font-bold' to="/login">Login</Link> </p>
-                <p className='text-danger'>{error}</p>
+               
             </div>
         </div>
     </div>

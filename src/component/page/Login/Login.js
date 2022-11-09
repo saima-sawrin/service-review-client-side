@@ -45,17 +45,20 @@ const Login = () => {
       console.log(user);
       navigate(from, {replace:true});
     })
-    .catch(error => console.error(error))
+    .catch(error => 
+        console.error(error))
   }
   const handleGithub=()=>{
       signIN(githubProvider)
    .then(result=>{
        console.log(result.user)
        navigate(from, {replace: true});
-     }).catch(error=>{
-       console.log(error)
      })
+     .catch( error => {
+        alert(error)
+        setError(error.message)
 
+    });
    }
     return (
             <div className="hero w-full my-20">
@@ -92,6 +95,7 @@ const Login = () => {
                      <br />
                      <button onClick={handleGithub}  className="mb-2 btn border-0 h-full bg-gradient-to-r from-violet-500 to-fuchsia-500" variant='outline-primary'><FaGithub className='text-yellow-400'></FaGithub>  Log in with Github</button>
                      </div>
+                     <p className='text-red-500'>{error}</p>
                     </form>
                     
                 </div>

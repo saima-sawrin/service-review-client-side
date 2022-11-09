@@ -25,8 +25,8 @@ const Services = () => {
             services.map(service => <Service key={service._id} service={service}></Service>)
          }
      </div>
-     <div className='flex justify-center '>
-     <Link to='/services'><button className="btn bg-violet-500 border-0  mx-20 my-5  ">View All</button></Link>
+     <div  className='bg-violet-400 flex justify-center mt-6 '>
+     <Link to='/services'><button className="btn text-white bg-violet-400 text-lg text-center border-0  mx-20 my-5  ">View All</button></Link>
      </div>
      
 
