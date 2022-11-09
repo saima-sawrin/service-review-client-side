@@ -1,30 +1,33 @@
 import React, { useContext, useState } from 'react';
+import img from '../../../assets/img/login.png';
 import { Link } from 'react-router-dom';
-import img from '../../assets/img/login.png';
 
-import { AuthContext } from '../../context/AuthProvider';
+
+import { AuthContext } from '../../../context/AuthProvider';
+
+
 const SignUp = () => {
-    const {createUser , profileUpdate , verifyEmail , signIN} = useContext(AuthContext);
-    const[error , setError] = useState('');
 
+    const {createUser } = useContext(AuthContext);
+    const[error , setError] = useState('');
+   
+    
      const handleSubmit = event => {
          event.preventDefault();
          const form = event.target;
          const name = form.name.value;
-         const photoURL = form.photoURL.value;
          const email = form.email.value;
          const password = form.password.value;
-         console.log(name, photoURL, email, password);
+         console.log(name, email, password);
         
          createUser(email, password)
          .then( result => {
              const user = result.user;
-             alert('Please Verify your email ');
+             alert('Successfully Registered ');
              console.log(user);
              form.reset();
-             handleUpdateProfile(name , photoURL)
-             handleEmailVerification();
-             alert('Successfully Registered')
+        
+            
             
              
          })
@@ -36,23 +39,7 @@ const SignUp = () => {
          
          
      }
-  
-     const handleUpdateProfile = (name, photoURL)=>{
-         const profile = {
-             displayName: name,
-             photoURL : photoURL
-         }
-         profileUpdate(profile)
-         .then(()=>{})
-         .catch(error => console.error(error))
- 
-     }
-     const handleEmailVerification  = () => {
-        verifyEmail()
-        .then(() =>{})
-        .catch(error => console.error(error));
-    }
-
+   
  
    
     return (
@@ -88,12 +75,12 @@ const SignUp = () => {
                     </div>
                 </form>
                 <p className='text-center'>Already have an account? <Link className='text-primary font-bold' to="/login">Login</Link> </p>
+                <p className='text-danger'>{error}</p>
             </div>
         </div>
     </div>
 );
 };
-
 
 
 export default SignUp;

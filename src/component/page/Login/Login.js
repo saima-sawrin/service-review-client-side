@@ -26,9 +26,9 @@ const Login = () => {
          const user = result.user;
          console.log(user);
          form.reset();
- 
          setError('');
          navigate(from, {replace: true});
+         
      })
      .catch(error => {
         console.error(error)

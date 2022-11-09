@@ -6,7 +6,7 @@ import AllServices from '../component/page/Home/Services/AllServices';
 import Services from '../component/page/Home/Services/Services';
 import Login from '../component/page/Login/Login';
 import Details from '../component/page/ServiceDetails/Details';
-import SignUp from '../component/SignUp/SignUp';
+import SignUp from '../component/page/SignUp/SignUp';
 import Main from '../Layout/Main';
 import PrivateRoute from './PrivateRouter';
 

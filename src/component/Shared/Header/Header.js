@@ -34,11 +34,14 @@ const Header = () => {
         <>
             {
               user?.uid ?
-              <>
-                  <button variant="light" onClick={handleLogOut}>Log out</button>
+              <> 
+                  <button><Link to='/addServices'>Add Services</Link></button>
+                  <button><Link to='/myReview'>My Review</Link></button>
+				  <button  onClick={handleLogOut}>Log out</button>
+				  
               </>
               :
-              <div div className="items-center flex-shrink-0 hidden lg:flex">
+              <div  className="items-center flex-shrink-0 hidden lg:flex">
                  <Link to='/login'><button className="self-center px-8 py-3 rounded">Sign in</button></Link>
                   <Link className='text-decoration-none  mx-3' to='/signup'><button className="self-center px-8 py-3 font-semibold rounded dark:bg-violet-400 dark:text-gray-900">Sign up</button></Link>
               </div>
