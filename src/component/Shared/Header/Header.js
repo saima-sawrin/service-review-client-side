@@ -50,6 +50,7 @@ const Header = () => {
 		  {user?.photoURL?
 		                
 						<img src={user.photoURL} alt="" title= {user.displayName} className="w-10 mx-auto rounded-full dark:bg-gray-500 aspect-square" />
+
 				   
 						  : <FaUser></FaUser>
 					  }</div>

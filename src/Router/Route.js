@@ -38,12 +38,14 @@ const router = createBrowserRouter([
             },
             {
                 path: '/myReview',
-                element: <Review></Review>
+                loader:()=>fetch('http://localhost:5000/reviews'),
+                element: <PrivateRoute><Review></Review></PrivateRoute>
             },
+          
             {
-                path: '/addServices/:id',
-                loader:({params})=>fetch(`http://localhost:5000/allServices/${params.id}`),
-                element: <AddServices></AddServices>
+                path: '/addServices',
+                loader:()=>fetch(`http://localhost:5000/allServices`),
+                element: <PrivateRoute><AddServices></AddServices></PrivateRoute>
             },
             {
                 path:'/service/:id',
