@@ -30,7 +30,7 @@ const AllCard = ({allService}) => {
              <FaStar className='me-3 w-5 h-5 fill-current text-amber-500'></FaStar>
              <p className='mx-3'>Price: ${price}</p>
              </div>
-              <Link to={`/service/${_id}`}><button className="btn border-2 ">Details</button></Link>
+              <Link to={`/services/${_id}`}><button className="btn border-2 ">Details</button></Link>
             </div>
           </div>
         </div>

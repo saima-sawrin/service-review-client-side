@@ -31,7 +31,7 @@ const Service = ({service}) => {
      <p className='mx-3'>Price: ${price}</p>
      </div>
      
-      <Link to={`/service/${_id}`}><button className="btn border-2 ">Details</button></Link>
+      <Link to={`/services/${_id}`}><button className="btn border-2 ">Details</button></Link>
     </div>
   </div>
 </div>

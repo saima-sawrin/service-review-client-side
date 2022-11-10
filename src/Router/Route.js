@@ -48,7 +48,7 @@ const router = createBrowserRouter([
                 element: <PrivateRoute><AddServices></AddServices></PrivateRoute>
             },
             {
-                path:'/service/:id',
+                path:'/services/:id',
                 loader:({params})=>fetch(`https://service-review-server-saima-sawrin.vercel.app/allServices/${params.id}`),
                 element: <Details></Details>
             },
