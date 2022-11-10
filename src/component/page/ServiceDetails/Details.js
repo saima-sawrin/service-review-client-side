@@ -115,7 +115,7 @@ const Details = () => {
 		</div>
 	</div>
 	<div className="p-4 space-y-2 text-sm dark:text-gray-400">
-		<p>{review.message}</p>
+		{/* <p>{review.message}</p> */}
 	</div>
 </div>
 </div>
