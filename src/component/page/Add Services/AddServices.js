@@ -29,7 +29,7 @@ const AddServices = () => {
         rating: rating
    
     }
-        fetch('http://localhost:5000/allServices',{
+        fetch('https://service-review-server-saima-sawrin.vercel.app/allServices',{
             method:'POST',
             headers: {
                 'Content-Type': 'application/json',

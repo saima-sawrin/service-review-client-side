@@ -38,18 +38,18 @@ const router = createBrowserRouter([
             },
             {
                 path: '/myReview',
-                loader:()=>fetch('http://localhost:5000/reviews'),
+                loader:()=>fetch('https://service-review-server-saima-sawrin.vercel.app/reviews'),
                 element: <PrivateRoute><Review></Review></PrivateRoute>
             },
           
             {
                 path: '/addServices',
-                loader:()=>fetch(`http://localhost:5000/allServices`),
+                loader:()=>fetch(`https://service-review-server-saima-sawrin.vercel.app/allServices`),
                 element: <PrivateRoute><AddServices></AddServices></PrivateRoute>
             },
             {
                 path:'/service/:id',
-                loader:({params})=>fetch(`http://localhost:5000/allServices/${params.id}`),
+                loader:({params})=>fetch(`https://service-review-server-saima-sawrin.vercel.app/allServices/${params.id}`),
                 element: <Details></Details>
             },
             {

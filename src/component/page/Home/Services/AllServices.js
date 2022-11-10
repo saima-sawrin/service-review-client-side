@@ -9,7 +9,7 @@ const AllServices = () => {
   const[allServices, setAllServices] = useState([])
   const{_id} = allServices;
   useEffect(()=>{
-    fetch('http://localhost:5000/allServices')
+    fetch('https://service-review-server-saima-sawrin.vercel.app/allServices')
     .then(res => res.json())
     .then(data => setAllServices(data))
 },

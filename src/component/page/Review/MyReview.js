@@ -23,7 +23,7 @@ const MyReview = ({ review, handleDelete }) => {
         rate:rate
    
     }
-        fetch('http://localhost:5000/reviews',{
+        fetch('https://service-review-server-saima-sawrin.vercel.app/reviews',{
             method:'POST',
             headers: {
                 'Content-Type': 'application/json',

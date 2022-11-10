@@ -11,14 +11,14 @@ const Review = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews`)
+        fetch(`https://service-review-server-saima-sawrin.vercel.app/reviews`)
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [user?.email])
 	const handleDelete = id => {
         const proceed = window.confirm('Are you sure ,you want to cancel this review')
         if (proceed) {
-            fetch(`http://localhost:5000/reviews/${id}`, {
+            fetch(`https://service-review-server-saima-sawrin.vercel.app/reviews/${id}`, {
                 method: 'DELETE',
 
             })
