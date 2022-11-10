@@ -7,7 +7,7 @@ const Gallery= () => {
       <h2 className="max-w-lg mb-5 font-sans text-3xl font-bold tracking-tight  sm:text-4xl sm:leading-none md:mb-6 text-center group">
               View Gallery
             </h2>
-            <section className="py-6 dark:bg-gray-800">
+   <section className="py-6 dark:bg-gray-800">
 	<div className="container flex flex-col justify-center p-4 mx-auto">
 		<div className="grid grid-cols-1 gap-4 lg:grid-cols-4 sm:grid-cols-2">
 			<img className="object-cover w-full dark:bg-gray-500 aspect-square" src="https://source.unsplash.com/random/300x300/?1" />

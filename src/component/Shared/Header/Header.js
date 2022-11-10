@@ -34,12 +34,12 @@ const Header = () => {
         <>
             {
               user?.uid ?
-              <> 
-                  <button><Link to='/addServices'>Add Services</Link></button>
-                  <button><Link to='/myReview'>My Review</Link></button>
+              <div className="items-center flex-shrink-0 hidden lg:flex "> 
+                  <button><Link className='mr-3' to='/addServices'>Add Services</Link></button>
+                  <button><Link className='mr-3' to='/myReview'>My Review</Link></button>
 				  <button  onClick={handleLogOut}>Log out</button>
 				  
-              </>
+              </div>
               :
               <div  className="items-center flex-shrink-0 hidden lg:flex">
                  <Link to='/login'><button className="self-center px-8 py-3 rounded">Sign in</button></Link>
@@ -50,11 +50,6 @@ const Header = () => {
 		  {user?.photoURL?
 		                
 						<img src={user.photoURL} alt="" title= {user.displayName} className="w-10 mx-auto rounded-full dark:bg-gray-500 aspect-square" />
-						//   <img
-						// 	  className='w-30 h-30 rounded-full'
-						// 	  title= {user.displayName}
-						// 	  src={user.photoURL}>
-						//   </img>
 				   
 						  : <FaUser></FaUser>
 					  }</div>

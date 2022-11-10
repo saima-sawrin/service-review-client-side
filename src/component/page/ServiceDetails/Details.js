@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { FaStar } from 'react-icons/fa';
 import { Link, useLoaderData } from 'react-router-dom';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
@@ -13,8 +13,11 @@ import PrivateRoute from '../../../Router/PrivateRouter';
 const Details = () => {
     const {_id,rating,price, service_id, title ,img , description}= useLoaderData();
     const{user} = useContext(AuthContext)
-    useTitle('serviceDetails')
-    
+	const [cart , setCart] = useState([]);
+
+	const handleAddServices =()=>{
+        
+	}
     return (
         <div className='flex w-3/5 justify-between m-auto'>
 
@@ -41,7 +44,7 @@ const Details = () => {
              <FaStar className='me-3 w-5 h-5 fill-current text-amber-500'></FaStar>
              <p className='mx-3'><b>Price: ${price}</b></p>
 			 <br />
-			 <button className='btn btn-secondary'>Add Service</button>
+			 
              </div>
               
             </div>
