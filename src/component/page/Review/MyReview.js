@@ -9,35 +9,36 @@ const MyReview = ({ review, handleDelete }) => {
     const {_id,image,feedback , rate,name,client_id}= review;
     console.log(review)
 
-    const  handleAddReview = (event)=>{
-        event.preventDefault();
-    const form = event.target;
-    const feedback = form.feedback.value;
-	const rate = event.rate.value;
-    const email = user?.email || 'unregistered';
+    // const  handleAddReview = (event)=>{
+    //     event.preventDefault();
+    // const form = event.target;
+    // const feedback = form.feedback.value;
+	// const rate = event.rate.value;
+    // const email = user?.email || 'unregistered';
 
 
-    const review = {
-        image:image,
-        feedback:feedback,
-        rate:rate
+    // const review = {
+    //     name,
+    //     image:image,
+    //     feedback:feedback,
+    //     rate:rate
    
-    }
-        fetch(`https://service-review-server-saima-sawrin.vercel.app/reviews?email=${user?.email}`,{
-            method:'POST',
-            headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify(review),
-        })
-        .then(res=> res.json())
-        .then(data=> {
-            if(data.acknowledged){
-                alert('successfully added')
-                event.target.reset();
-            }
-        })
-    }
+    // }
+    //     fetch(`https://service-review-server-saima-sawrin.vercel.app/reviews?email=${user?.email}`,{
+    //         method:'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //           },
+    //           body: JSON.stringify(review),
+    //     })
+    //     .then(res=> res.json())
+    //     .then(data=> {
+    //         if(data.acknowledged){
+    //             alert('successfully added')
+    //             event.target.reset();
+    //         }
+    //     })
+    // }
     return (
         <tr>
         <th>

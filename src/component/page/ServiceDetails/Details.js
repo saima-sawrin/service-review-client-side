@@ -21,35 +21,52 @@ const Details = () => {
         const form = event.target;
         const name = form.name.value;
         const email = user?.email || 'unregistered';
-        const message = form.message.value;
+        const feedback = form.feedback.value;
 
         const review = {
             service: _id,
-            customer: name,
+            name: name,
             email,
-            message,
+            feedback,
 
         }
 
-        fetch('https://service-review-server-saima-sawrin.vercel.app/reviews', {
-            method: 'POST',
+        // fetch('https://service-review-server-saima-sawrin.vercel.app/reviews', {
+        //     method: 'POST',
+        //     headers: {
+        //         'content-type': 'application/json'
+        //     },
+        //     body: JSON.stringify(review)
+        // })
+        //     .then(res => res.json())
+        //     .then(data => {
+        //         console.log(data)
+        //         if (data.acknowledge) {
+        //             alert('review successfully')
+        //             form.reset()
+        //         }
+        //     })
+        
+        fetch(`https://service-review-server-saima-sawrin.vercel.app/reviews?email=${user?.email}`,{
+            method:'POST',
             headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(review)
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(review),
         })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
-                if (data.acknowledge) {
-                    alert('review successfully')
-                    form.reset()
-                }
-            })
+        .then(res=> res.json())
+        .then(data=> {
+            if(data.acknowledged){
+                alert('successfully added')
+                event.target.reset();
+            }
+        })
             .catch(err => console.error(err));
 
 
     }
+  
+
 
 	
     return (
@@ -126,7 +143,7 @@ const Details = () => {
                     <input name='email' type="text" placeholder="email" defaultValue={user?.email} className="input input-bordered w-full " required />
 
                 </div>
-                <textarea name='message' className="textarea textarea-bordered h-24 w-full" placeholder="your review"></textarea>
+                <textarea name='feedback' className="textarea textarea-bordered h-24 w-full" placeholder="your review"></textarea>
                 <input className='btn ' type="submit" value="Give Your Feedback" />
             </form>
 
