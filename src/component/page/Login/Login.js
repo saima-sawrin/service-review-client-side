@@ -103,9 +103,9 @@ const Login = () => {
                         <p className='text-center'>New to Beauty Salon? <Link className='font-bold' to="/signup">Sign Up</Link> </p>
                      <div className=' mb-2'>
                     
-                  <button onClick={handleSignIn}  className="d-inline btn  border-0 bg-gradient-to-r from-purple-500 to-pink-500 mb-2 " variant='outline-primary'> <FaGoogle className='text-yellow-400'></FaGoogle>  Log in with Google</button>
+                  <button onClick={handleSignIn}  className="d-inline btn btn-block  border-0 bg-gradient-to-r from-purple-500 to-pink-500 mb-2 " variant='outline-primary'> <FaGoogle className='text-yellow-400'></FaGoogle>  Log in with Google</button>
                      <br />
-                     <button onClick={handleGithub}  className="mb-2  btn border-0  bg-gradient-to-r from-violet-500 to-fuchsia-500" variant='outline-primary'><FaGithub className='text-yellow-400'></FaGithub>  Log in with Github</button>
+                     <button onClick={handleGithub}  className="mb-2  btn border-0 btn-block bg-gradient-to-r from-violet-500 to-fuchsia-500" variant='outline-primary'><FaGithub className='text-yellow-400'></FaGithub>  Log in with Github</button>
                      </div>
                      <p className='text-red-500'>{error}</p>
                     </form>

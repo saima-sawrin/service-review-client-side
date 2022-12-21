@@ -5,13 +5,14 @@ import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 import useTitle from '../../../Hooks/useTitle';
 import { AuthContext } from '../../../context/AuthProvider';
+import MyReview from '../Review/MyReview';
 
 
 // import { AuthContext } from '../../../context/AuthProvider';
 
 
 const Details = () => {
-    const {_id,rating,price, service_id, title ,img , description}= useLoaderData();
+    const {_id,rating,price,  title ,img , description}= useLoaderData();
     const{user} = useContext(AuthContext)
 	console.log(user)
 	useTitle('Details')
@@ -20,6 +21,7 @@ const Details = () => {
         event.preventDefault();
         const form = event.target;
         const name = form.name.value;
+        const img = form.img.value;
         const email = user?.email || 'unregistered';
         const feedback = form.feedback.value;
 
@@ -27,6 +29,7 @@ const Details = () => {
             service: _id,
             name: name,
             email,
+            img ,
             feedback,
 
         }
@@ -70,7 +73,7 @@ const Details = () => {
 
 	
     return (
-        <div className='flex w-3/5 justify-between m-auto'>
+        <div className='flex  justify-center gap-5 m-auto'>
 
             {/* Service details section */}
             <div>
@@ -131,6 +134,7 @@ const Details = () => {
 			<span className="text-xl font-bold">4.5</span>
 		</div>
 	</div>
+   
 	<div className="p-4 space-y-2 text-sm dark:text-gray-400">
 		{/* <p>{review.message}</p> */}
 	</div>
@@ -141,9 +145,10 @@ const Details = () => {
                 <div className='grid grid-cols-1 gap-4'>
                     <input name='name' type="text" placeholder="name" className="input input-bordered w-full " required />
                     <input name='email' type="text" placeholder="email" defaultValue={user?.email} className="input input-bordered w-full " required />
+                    <input name='img' type="text" placeholder="photoURL" defaultValue={user?.photoURL} className="input input-bordered w-full " required />
 
                 </div>
-                <textarea name='feedback' className="textarea textarea-bordered h-24 w-full" placeholder="your review"></textarea>
+                <textarea name='feedback' className="textarea mt-2 textarea-bordered h-24 w-full" placeholder="your review"></textarea>
                 <input className='btn ' type="submit" value="Give Your Feedback" />
             </form>
 
